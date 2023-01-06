@@ -5,23 +5,20 @@ This repository contains code for provisioning the AWS Infrastructure and creati
 # Getting started
 ## To get the infrastructure running on AWS:
 - Clone this repository
-- Change directory to Terraform/dev/
+- Change directory to terraform/
 - Run "terraform init" to install all the required modules from the given source
-- Run "terraform plan -out=dev" to save the plan in a file named "dev"(you may chnage the name as per choice)
-- Run "terraform apply dev" to see the resources to be created, after typing "yes" in console, your AWS Infrastructure will be provisioned
+- Run "terraform apply" to see the resources to be created, after typing "yes" in console, your AWS Infrastructure will be provisioned
 
 
 ## To build AMI for NodeJS Application(BACKEND):
 - Change directory into Packer/
-- Run "packer init NodeJS AMI.json" for initializing packer, although it won't get initialized for a JSON File....STILL WE DO IT...FORMALITY!
-- Run "packer validate NodeJS AMI.json" for validating the configuration of this file
-- Run "packer build NodeJS AMI.json" to start creating the AMI and observe the process to know how it happens. Trust me, it's completely, MAGICAL!
+- Run "packer init ami.pkr.hcl" for initializing packer.
+- Run "packer validate ami.pkr.hcl" for validating the configuration of this file.
+- Run "packer build ami.pkr.hcl" to start creating the AMI and observe the process to know how it happens. Trust me, it's completely, MAGICAL!
 
 # Code Overview
 ## Dependencies
-- [terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) - To provision AWS Infrastructure
-- [packer](https://developer.hashicorp.com/packer/downloads) - To provision the NodeJS Application AMI
-- [aws cli v2 for windows](https://docs.aws.amazon.com/cli/v1/userguide/install-windows.html) - To configure AWS Credentials(Access Key ID, Secret Access Key and Region) of the account in which we are deploying the Web Application
+- we have added the required dependeinies in AMI.
 
 ## Application Structure
 - Terraform/ - This folder contains terraform code to create infrastructure for 3-Tier WebApp Deployment in AWS.
