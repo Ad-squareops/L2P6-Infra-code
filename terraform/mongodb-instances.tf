@@ -6,6 +6,7 @@ resource "aws_instance" "s1" {
   security_groups        = [aws_security_group.adimongo.id]
   subnet_id              = element(module.vpc.private_subnets, 0)
   vpc_security_group_ids = [aws_security_group.adimongo.id]
+  user_data              = file("mongo.sh")
 
   tags = {
     Name = "adi-mongo1"
@@ -20,6 +21,7 @@ resource "aws_instance" "s2" {
   security_groups        = [aws_security_group.adimongo.id]
   subnet_id              = element(module.vpc.private_subnets, 0)
   vpc_security_group_ids = [aws_security_group.adimongo.id]
+  user_data              = file("mongo.sh")
 
   tags = {
     Name = "adi-mongo2"
@@ -34,6 +36,7 @@ resource "aws_instance" "s3" {
   security_groups        = [aws_security_group.adimongo.id]
   subnet_id              = element(module.vpc.private_subnets, 0)
   vpc_security_group_ids = [aws_security_group.adimongo.id]
+  user_data              = file("mongo.sh")
 
   tags = {
     Name = "adi-mongo3"
