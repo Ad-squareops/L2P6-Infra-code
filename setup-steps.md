@@ -51,5 +51,8 @@ $ db.getUsers()
 You can check list of db also
 $ show dbs
 
-# Step 5 — Now setup NodeJS backend in another ec2 instance using the repo https://github.com/AJGit98/node-express-realworld-example-app.git
-# Step 6 — Now setup ReactJS frontend in AWS amplify using the repo https://github.com/AJGit98/react-redux-realworld-example-app.git 
+# Step 5 — Now setup MongoDB URL for Authentication: we can use parameter store or secrets manager for this
+mongodb://admin:password@ip-1-instance:27017,ip-2-instance:27017,ip-3-instance:27017/conduit?authSource=admin&replicaSet=rs_name
+
+# Step 6 — Now setup NodeJS backend in another ec2 instance using the repo https://github.com/AJGit98/node-express-realworld-example-app.git
+# Step 7 — Now setup ReactJS frontend in AWS amplify using the repo https://github.com/AJGit98/react-redux-realworld-example-app.git 
