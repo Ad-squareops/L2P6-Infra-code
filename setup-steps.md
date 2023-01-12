@@ -14,8 +14,6 @@ $ sudo ufw allow from mongo3_server_ip to any port 27017
 $ sudo ufw allow from mongo2_server_ip to any port 27017
 $ sudo ufw allow from mongo1_server_ip to any port 27017
 
-$ sudo systemctl start mongod
-
 # Step 2 — Make changes in MongoDB configuration file: (for all 3 mongo instances)
 $ sudo nano /etc/mongod.conf
 . . .
