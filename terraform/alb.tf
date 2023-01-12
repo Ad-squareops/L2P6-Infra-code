@@ -18,7 +18,6 @@ module "alb" {
         enabled             = true
         interval            = 30
         path                = "/"
-        port                = "traffic-port"
         healthy_threshold   = 2
         unhealthy_threshold = 3
         timeout             = 5
