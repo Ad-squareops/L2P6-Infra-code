@@ -31,6 +31,8 @@ replication:
 
 # save the config file and restart the mongo services
 $ sudo systemctl restart mongod
+$ sudo systemctl status mongod
+$ sudo systemctl enable mongod
 
 # Step 3 — Now ssh into primary instance and initiate the replica set :
 $ mongo
