@@ -24,7 +24,7 @@ sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/linux/amd64/latest/Ama
 sudo apt install -y unzip
 sudo unzip -o AmazonCloudWatchAgent.zip
 sudo ./install.sh
-sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c ssm:AmazonCloudWatch-adi-L2P6 -s
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c ssm:AmazonCloudWatch-linux-adi-L2P6 -s
 systemctl start amazon-cloudwatch-agent.service
 systemctl enable amazon-cloudwatch-agent.service
 systemctl status amazon-cloudwatch-agent.service
