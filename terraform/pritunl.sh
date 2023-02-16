@@ -8,3 +8,4 @@ apt-get update
 apt-get install mongodb-server pritunl -y
 sudo systemctl start mongodb
 sudo systemctl start pritunl
+sudo systemctl enable pritunl
