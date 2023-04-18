@@ -9,7 +9,6 @@ module "asg" {
   target_group_arns         = module.alb.target_group_arns
   wait_for_capacity_timeout = 0
   health_check_type         = "EC2"
-  security_groups           = [aws_security_group.asg-sg.id]
   vpc_zone_identifier       = [element(module.vpc.private_subnets, 0), element(module.vpc.private_subnets, 1)]
 
   instance_refresh = {
